@@ -1,0 +1,6 @@
+framework module Pods_BNPhotoViewer {
+  umbrella header "Pods-BNPhotoViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
