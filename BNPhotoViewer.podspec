@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
 
   s.resources = "BNPhotoViewer/*.xib"
   s.resource_bundles = {
-      'PhotoViewerController' => ['BNPhotoViewer/*.xib']
+      'BNPhotoViewer' => ['BNPhotoViewer/**/*.xib']
   }
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
