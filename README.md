@@ -67,6 +67,10 @@ extension ViewController: BNPhotoViewerDelegate {
     func photoViewer(_ photoViewer: BNPhotoViewer, didChangeState state: BNPhotoViewerState) {
         // OPTIONAL: you can perform some action when photo viewer switches between detailed and regular states 
     }
+    
+    func photoViewerDidClose() {
+        // OPTIONAL: perform some action after it closes
+    }
 }
 ```
 After this you are all set to present the photoViewer:
