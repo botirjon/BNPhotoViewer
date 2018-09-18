@@ -6,9 +6,6 @@
 <img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen4.PNG" alt="Screenshot" width="200" height="356">
 <img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen5.PNG" alt="Screenshot" width="200" height="356">
 <img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen3.PNG" alt="Screenshot" width="200" height="356">
-`<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen2.PNG" alt="Screenshot" width="200" height="356">
-<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen2.PNG" alt="Screenshot" width="200" height="356">
-<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen2.PNG" alt="Screenshot" width="200" height="356">`
     
 ## Example
 
