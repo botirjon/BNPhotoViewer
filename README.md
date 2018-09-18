@@ -2,13 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 
-![Screenshot](screen1.PNG)
-![Screenshot](screen2.PNG)
-![Screenshot](screen3.PNG)
-![Screenshot](screen4.PNG)
-![Screenshot](screen5.PNG)
-![Screenshot](screen6.PNG)
-![Screenshot](screen7.PNG)
+![](https://github.com/botirjon/BNPhotoViewer/screen2.PNG | width=100)
     
 ## Example
 
