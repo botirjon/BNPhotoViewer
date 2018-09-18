@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 
-![alt text](BNPhotoViewer/IMG_2092.PNG)
+![alt text](https://github.com/botirjon/BNPhotoViewer/IMG_2092.PNG)
     
 ## Example
 
