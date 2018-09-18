@@ -95,4 +95,4 @@ Botirjon Nasridinov,  botirjon.nasridinov@gmail.com
 
 ## License
 
-PhotoViewerController is available under the MIT license. See the LICENSE file for more info.
+BNPhotoViewer is available under the MIT license. See the LICENSE file for more info.
