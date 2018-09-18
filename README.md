@@ -1,10 +1,9 @@
-# PhotoViewerController
+# BNPhotoViewer
 
-[![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/PhotoViewerController.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/PhotoViewerController)
-[![Version](https://img.shields.io/cocoapods/v/PhotoViewerController.svg?style=flat)](http://cocoapods.org/pods/PhotoViewerController)
-[![License](https://img.shields.io/cocoapods/l/PhotoViewerController.svg?style=flat)](http://cocoapods.org/pods/PhotoViewerController)
-[![Platform](https://img.shields.io/cocoapods/p/PhotoViewerController.svg?style=flat)](http://cocoapods.org/pods/PhotoViewerController)
+[![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 
+![Screenshot](IMG_2092.PNG = 400x711)
+    
 ## Example
 
 To be able to use the library, you need to first install the pod. Then import the PhotoViewerController into your project:
@@ -71,6 +70,10 @@ extension ViewController: BNPhotoViewerDelegate {
     func photoViewer(_ photoViewer: BNPhotoViewer, didChangeState state: BNPhotoViewerState) {
         // OPTIONAL: you can perform some action when photo viewer switches between detailed and regular states 
     }
+    
+    func photoViewerDidClose() {
+        // OPTIONAL: perform some action after it closes
+    }
 }
 ```
 After this you are all set to present the photoViewer:
@@ -99,4 +102,4 @@ Botirjon Nasridinov,  botirjon.nasridinov@gmail.com
 
 ## License
 
-PhotoViewerController is available under the MIT license. See the LICENSE file for more info.
+BNPhotoViewer is available under the MIT license. See the LICENSE file for more info.
