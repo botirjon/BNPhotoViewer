@@ -7,7 +7,7 @@
 ![Screenshot](screen5.PNG)
 ![Screenshot](screen3.PNG)
     
-## Example
+## Usage
 
 To be able to use the library, you need to first install the pod. Then import the PhotoViewerController into your project:
 ```ruby
