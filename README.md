@@ -2,12 +2,12 @@
 
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 
-<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen2.PNG" alt="Screenshot" width="200" height="356">
-<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen4.PNG" alt="Screenshot" width="200" height="356">
-<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen5.PNG" alt="Screenshot" width="200" height="356">
-<img src="https://github.com/botirjon/BNPhotoViewer/raw/master/screen3.PNG" alt="Screenshot" width="200" height="356">
+![Screenshot](screen2.PNG)
+![Screenshot](screen4.PNG)
+![Screenshot](screen5.PNG)
+![Screenshot](screen3.PNG)
     
-## Example
+## Usage
 
 To be able to use the library, you need to first install the pod. Then import the PhotoViewerController into your project:
 ```ruby
