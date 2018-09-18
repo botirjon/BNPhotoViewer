@@ -81,6 +81,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "BNPhotoViewer", "BNPhotoViewer/Classes/**/*"
+  s.swift_version = '4.1'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
