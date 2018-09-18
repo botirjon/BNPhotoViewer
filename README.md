@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 
-![Screenshot](screen2.PNG)
+<img src="/botirjon/BNPhotoViewer/raw/master/screen2.PNG" alt="Screenshot" width="200" height="356">
     
 ## Example
 
