@@ -1,4 +1,4 @@
-# PhotoViewerController
+# BNPhotoViewer
 
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 ## Example
