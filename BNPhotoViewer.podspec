@@ -25,9 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                   A photo viewer to display a sequence of multiple photos
                    DESC
 
-  # s.homepage     = "http://EXAMPLE/BNPhotoViewer"
+  s.homepage     = "https://github.com/botirjon/BNPhotoViewer"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -68,7 +69,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/botirjon/BNPhotoViewer.git", :tag => "{s.version}" }
+  s.source       = { :git => "https://github.com/botirjon/BNPhotoViewer.git", :tag => "s.version.to_s" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +80,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "BNPhotoViewer", "BNPhotoViewer/**/*"
+  s.source_files  = "BNPhotoViewer", "BNPhotoViewer/Classes/**/*"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -89,9 +90,9 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = "BNPhotoViewer/*.xib"
+  s.resources = "BNPhotoViewer/Resources/*.xib"
   s.resource_bundles = {
-      'BNPhotoViewer' => ['BNPhotoViewer/**/*.xib']
+      'BNPhotoViewer' => ['BNPhotoViewer/Resources/**/*.xib']
   }
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -11,6 +11,22 @@
 		6066B7FB2147EB0100084D0B /* BNPhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6066B7F92147EB0100084D0B /* BNPhotoViewer.swift */; };
 		6066B7FC2147EB0100084D0B /* BNPhotoViewer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6066B7FA2147EB0100084D0B /* BNPhotoViewer.xib */; };
 		6066B81F2147F5E200084D0B /* BNPhotoViewerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6066B81E2147F5E200084D0B /* BNPhotoViewerDelegate.swift */; };
+		607A4D79214FE1FE00CA65F4 /* BNEasy2TapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607A4D78214FE1FE00CA65F4 /* BNEasy2TapButton.swift */; };
+		60F37E272148FEC800EDE199 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E1D2148FEC700EDE199 /* Extensions.swift */; };
+		60F37E282148FEC800EDE199 /* BNConstraintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E1E2148FEC700EDE199 /* BNConstraintHelper.swift */; };
+		60F37E292148FEC800EDE199 /* BNPhotoListLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E1F2148FEC700EDE199 /* BNPhotoListLayout.swift */; };
+		60F37E2A2148FEC800EDE199 /* BNPhotoViewer+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E202148FEC700EDE199 /* BNPhotoViewer+Update.swift */; };
+		60F37E2B2148FEC800EDE199 /* BNPhotoCell+UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E212148FEC700EDE199 /* BNPhotoCell+UIScrollView.swift */; };
+		60F37E2C2148FEC800EDE199 /* BNPhotoViewer+EventHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E222148FEC700EDE199 /* BNPhotoViewer+EventHandle.swift */; };
+		60F37E2D2148FEC800EDE199 /* BNPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E232148FEC800EDE199 /* BNPhotoCell.swift */; };
+		60F37E2E2148FEC800EDE199 /* BNPhotoViewer+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E242148FEC800EDE199 /* BNPhotoViewer+Setup.swift */; };
+		60F37E2F2148FEC800EDE199 /* BNPhotoViewer+UIGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E252148FEC800EDE199 /* BNPhotoViewer+UIGestureRecognizer.swift */; };
+		60F37E302148FEC800EDE199 /* BNPhotoViewer+PhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E262148FEC800EDE199 /* BNPhotoViewer+PhotoList.swift */; };
+		60F37E3B2149052A00EDE199 /* BNPhotoViewer+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E3A2149052A00EDE199 /* BNPhotoViewer+ScrollView.swift */; };
+		60F37E48214AAC2900EDE199 /* BNPhotoViewer+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E44214AAC2900EDE199 /* BNPhotoViewer+API.swift */; };
+		60F37E49214AAC2900EDE199 /* BNPhotoViewer+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E45214AAC2900EDE199 /* BNPhotoViewer+Metrics.swift */; };
+		60F37E4A214AAC2900EDE199 /* BNPassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E46214AAC2900EDE199 /* BNPassThroughView.swift */; };
+		60F37E4B214AAC2900EDE199 /* BNPhotoViewer+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F37E47214AAC2900EDE199 /* BNPhotoViewer+Util.swift */; };
 		C6C1AA188F5DBA45D2F31306 /* Pods_BNPhotoViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12DD35E2BD5974CA35C6A2B /* Pods_BNPhotoViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +37,22 @@
 		6066B7F92147EB0100084D0B /* BNPhotoViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPhotoViewer.swift; sourceTree = "<group>"; };
 		6066B7FA2147EB0100084D0B /* BNPhotoViewer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNPhotoViewer.xib; sourceTree = "<group>"; };
 		6066B81E2147F5E200084D0B /* BNPhotoViewerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNPhotoViewerDelegate.swift; sourceTree = "<group>"; };
+		607A4D78214FE1FE00CA65F4 /* BNEasy2TapButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNEasy2TapButton.swift; sourceTree = "<group>"; };
+		60F37E1D2148FEC700EDE199 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		60F37E1E2148FEC700EDE199 /* BNConstraintHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNConstraintHelper.swift; sourceTree = "<group>"; };
+		60F37E1F2148FEC700EDE199 /* BNPhotoListLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNPhotoListLayout.swift; sourceTree = "<group>"; };
+		60F37E202148FEC700EDE199 /* BNPhotoViewer+Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+Update.swift"; sourceTree = "<group>"; };
+		60F37E212148FEC700EDE199 /* BNPhotoCell+UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoCell+UIScrollView.swift"; sourceTree = "<group>"; };
+		60F37E222148FEC700EDE199 /* BNPhotoViewer+EventHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+EventHandle.swift"; sourceTree = "<group>"; };
+		60F37E232148FEC800EDE199 /* BNPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNPhotoCell.swift; sourceTree = "<group>"; };
+		60F37E242148FEC800EDE199 /* BNPhotoViewer+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+Setup.swift"; sourceTree = "<group>"; };
+		60F37E252148FEC800EDE199 /* BNPhotoViewer+UIGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+UIGestureRecognizer.swift"; sourceTree = "<group>"; };
+		60F37E262148FEC800EDE199 /* BNPhotoViewer+PhotoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+PhotoList.swift"; sourceTree = "<group>"; };
+		60F37E3A2149052A00EDE199 /* BNPhotoViewer+ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+ScrollView.swift"; sourceTree = "<group>"; };
+		60F37E44214AAC2900EDE199 /* BNPhotoViewer+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+API.swift"; sourceTree = "<group>"; };
+		60F37E45214AAC2900EDE199 /* BNPhotoViewer+Metrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+Metrics.swift"; sourceTree = "<group>"; };
+		60F37E46214AAC2900EDE199 /* BNPassThroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BNPassThroughView.swift; sourceTree = "<group>"; };
+		60F37E47214AAC2900EDE199 /* BNPhotoViewer+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BNPhotoViewer+Util.swift"; sourceTree = "<group>"; };
 		9D599986004F07FBE619B541 /* Pods-BNPhotoViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNPhotoViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BNPhotoViewer/Pods-BNPhotoViewer.release.xcconfig"; sourceTree = "<group>"; };
 		F12DD35E2BD5974CA35C6A2B /* Pods_BNPhotoViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BNPhotoViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4663F2AD4050AB7E9BEFEE8 /* Pods-BNPhotoViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BNPhotoViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BNPhotoViewer/Pods-BNPhotoViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,8 +127,24 @@
 		6066B8212147F61D00084D0B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6066B81E2147F5E200084D0B /* BNPhotoViewerDelegate.swift */,
 				6066B7F92147EB0100084D0B /* BNPhotoViewer.swift */,
+				60F37E44214AAC2900EDE199 /* BNPhotoViewer+API.swift */,
+				60F37E45214AAC2900EDE199 /* BNPhotoViewer+Metrics.swift */,
+				60F37E47214AAC2900EDE199 /* BNPhotoViewer+Util.swift */,
+				60F37E3A2149052A00EDE199 /* BNPhotoViewer+ScrollView.swift */,
+				60F37E222148FEC700EDE199 /* BNPhotoViewer+EventHandle.swift */,
+				60F37E262148FEC800EDE199 /* BNPhotoViewer+PhotoList.swift */,
+				60F37E242148FEC800EDE199 /* BNPhotoViewer+Setup.swift */,
+				60F37E252148FEC800EDE199 /* BNPhotoViewer+UIGestureRecognizer.swift */,
+				60F37E202148FEC700EDE199 /* BNPhotoViewer+Update.swift */,
+				6066B81E2147F5E200084D0B /* BNPhotoViewerDelegate.swift */,
+				60F37E1E2148FEC700EDE199 /* BNConstraintHelper.swift */,
+				60F37E232148FEC800EDE199 /* BNPhotoCell.swift */,
+				60F37E212148FEC700EDE199 /* BNPhotoCell+UIScrollView.swift */,
+				60F37E1F2148FEC700EDE199 /* BNPhotoListLayout.swift */,
+				60F37E46214AAC2900EDE199 /* BNPassThroughView.swift */,
+				60F37E1D2148FEC700EDE199 /* Extensions.swift */,
+				607A4D78214FE1FE00CA65F4 /* BNEasy2TapButton.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -203,8 +251,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F37E292148FEC800EDE199 /* BNPhotoListLayout.swift in Sources */,
+				60F37E2B2148FEC800EDE199 /* BNPhotoCell+UIScrollView.swift in Sources */,
+				60F37E2F2148FEC800EDE199 /* BNPhotoViewer+UIGestureRecognizer.swift in Sources */,
+				60F37E282148FEC800EDE199 /* BNConstraintHelper.swift in Sources */,
+				607A4D79214FE1FE00CA65F4 /* BNEasy2TapButton.swift in Sources */,
 				6066B7FB2147EB0100084D0B /* BNPhotoViewer.swift in Sources */,
+				60F37E4A214AAC2900EDE199 /* BNPassThroughView.swift in Sources */,
+				60F37E2E2148FEC800EDE199 /* BNPhotoViewer+Setup.swift in Sources */,
+				60F37E272148FEC800EDE199 /* Extensions.swift in Sources */,
+				60F37E48214AAC2900EDE199 /* BNPhotoViewer+API.swift in Sources */,
+				60F37E2D2148FEC800EDE199 /* BNPhotoCell.swift in Sources */,
 				6066B81F2147F5E200084D0B /* BNPhotoViewerDelegate.swift in Sources */,
+				60F37E302148FEC800EDE199 /* BNPhotoViewer+PhotoList.swift in Sources */,
+				60F37E2A2148FEC800EDE199 /* BNPhotoViewer+Update.swift in Sources */,
+				60F37E49214AAC2900EDE199 /* BNPhotoViewer+Metrics.swift in Sources */,
+				60F37E4B214AAC2900EDE199 /* BNPhotoViewer+Util.swift in Sources */,
+				60F37E3B2149052A00EDE199 /* BNPhotoViewer+ScrollView.swift in Sources */,
+				60F37E2C2148FEC800EDE199 /* BNPhotoViewer+EventHandle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
