@@ -1,6 +1,9 @@
 # BNPhotoViewer
 
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
+
+![alt text](BNPhotoViewer/IMG_2092.PNG)
+    
 ## Example
 
 To be able to use the library, you need to first install the pod. Then import the PhotoViewerController into your project:
