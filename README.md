@@ -1,10 +1,6 @@
 # PhotoViewerController
 
-[![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/PhotoViewerController.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/PhotoViewerController)
-[![Version](https://img.shields.io/cocoapods/v/PhotoViewerController.svg?style=flat)](http://cocoapods.org/pods/PhotoViewerController)
-[![License](https://img.shields.io/cocoapods/l/PhotoViewerController.svg?style=flat)](http://cocoapods.org/pods/PhotoViewerController)
-[![Platform](https://img.shields.io/cocoapods/p/PhotoViewerController.svg?style=flat)](http://cocoapods.org/pods/PhotoViewerController)
-
+[![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
 ## Example
 
 To be able to use the library, you need to first install the pod. Then import the PhotoViewerController into your project:
