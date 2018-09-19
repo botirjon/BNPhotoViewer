@@ -188,11 +188,11 @@ public class BNPhotoViewer: UIViewController {
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        clearOnClose()
     }
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        clearOnClose()
         photoViewerDidClose?()
         delegate?.photoViewerDidClose()
     }
