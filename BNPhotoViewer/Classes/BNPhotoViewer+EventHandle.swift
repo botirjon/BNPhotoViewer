@@ -98,7 +98,7 @@ public extension BNPhotoViewer {
         self.dismiss(animated: false, completion: completion)
     }
     
-    func clearOnClose() {
+    func clear() {
         restoreToOrigin()
         restore()
     }

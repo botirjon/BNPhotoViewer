@@ -159,6 +159,7 @@ public class BNPhotoViewer: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fixViewFrame(withSize: trueViewSize)
+        clear()
         reloadData()
         saveNonZeroStatusBarHeight()
         updateTopOffset()
@@ -192,7 +193,6 @@ public class BNPhotoViewer: UIViewController {
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        clearOnClose()
         photoViewerDidClose?()
         delegate?.photoViewerDidClose()
     }
