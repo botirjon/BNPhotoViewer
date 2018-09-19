@@ -51,7 +51,7 @@ extension Array {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     var statusBarHeight: CGFloat {
         return UIApplication.shared.statusBarFrame.size.height
     }
@@ -66,5 +66,18 @@ extension UIViewController {
     
     var isPortrait: Bool {
         return orientation.isPortrait
+    }
+    
+    public var statusBarView: UIView? {
+        return UIApplication.shared.statusBarView
+    }
+}
+
+public extension UIApplication {
+    public var statusBarView: UIView? {
+        if responds(to: Selector(("statusBar"))) {
+            return value(forKey: "statusBar") as? UIView
+        }
+        return nil
     }
 }

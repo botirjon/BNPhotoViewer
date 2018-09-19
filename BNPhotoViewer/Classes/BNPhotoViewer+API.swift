@@ -12,6 +12,9 @@ public typealias BNBasicAction = () -> Void
 public enum BNPhotoViewerState {
     case detailed
     case regular
+    case dragDownBegan
+    case dragDownEnded
+    case dragDownIdle
 }
 
 public extension BNPhotoViewer {
@@ -40,7 +43,7 @@ public extension BNPhotoViewer {
      */
     
     public func go(toItemAt index: Int, animated: Bool = false) {
-        guard let offset = contentOffset(forItemAt: index) else {
+        guard isViewLoaded, let offset = contentOffset(forItemAt: index) else {
             return
         }
         OperationQueue.main.addOperation {
@@ -58,5 +61,13 @@ public extension BNPhotoViewer {
         OperationQueue.main.addOperation {
             self.photoList.reloadData()
         }
+    }
+    
+    /**
+     Index of the currently visible item
+     */
+    
+    public var visibleItemIndex: Int {
+        return currentIndex
     }
 }

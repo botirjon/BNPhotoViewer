@@ -134,14 +134,6 @@ public extension BNPhotoViewer {
      * MARK: - Update utils
      */
     
-    func setInitialItem() {
-        guard !isInitialItemSet, initialIndex >= 0, initialIndex < delegate?.numberOfItems(in: self) ?? 0 else {
-            return
-        }
-        isInitialItemSet = true
-        go(toItemAt: initialIndex)
-    }
-    
     func updateDisplayItems(forItemAt index: Int? = nil) {
         updateTitle(forItemAt: index)
         updateTopBar(forItemAt: index)
@@ -159,42 +151,128 @@ public extension BNPhotoViewer {
         }
     }
     
-    func showBars(animated: Bool = false, animationDuration: TimeInterval = 0.2) {
+    func updateDisplayItems(forState state: BNPhotoViewerState, animated: Bool = false) {
+        switch state {
+        case .detailed:
+            hideBars(animated: animated)
+        case .regular:
+            showBars(animated: animated)
+        case .dragDownBegan:
+            if isStatusBarHidden {
+                UIView.animate(withDuration: Attributes.shortAnimationDuration) {
+                    self.showStatusBar(animated: false)
+                    self.hideBars(animated: false, shouldHideStatusBar: false)
+                }
+            }
+            else {
+                hideBars(animated: animated, shouldHideStatusBar: false)
+            }
+        case .dragDownEnded:
+            if isStatusBarHidden {
+                UIView.animate(withDuration: Attributes.shortAnimationDuration) {
+                    self.showStatusBar(animated: false)
+                    self.showBars(animated: false, shouldShowStatusBar: false)
+                }
+            }
+            else {
+                showBars(animated: animated, shouldShowStatusBar: false)
+            }
+        case .dragDownIdle:
+            hideBars(animated: false, shouldHideStatusBar: true)
+        }
+    }
+    
+    func showBars(animated: Bool = false, animationDuration: TimeInterval = 0.2, shouldShowStatusBar: Bool = true) {
         if animated {
             UIView.animate(withDuration: animationDuration, animations: {
                 self.bottomContainer.alpha = 1
                 self.topContainer.alpha = 1
-                self.shouldHideStatusBar = false
+                if shouldShowStatusBar && self.isStatusBarHidden {
+                    self.showStatusBar()
+                }
             })
         }
         else {
             bottomContainer.alpha = 1
             topContainer.alpha = 1
-            shouldHideStatusBar = false
+            if shouldShowStatusBar && self.isStatusBarHidden {
+                self.showStatusBar()
+            }
         }
     }
     
-    func hideBars(animated: Bool = false, animationDuration: TimeInterval = 0.2) {
+    func hideBars(animated: Bool = false, animationDuration: TimeInterval = 0.2, shouldHideStatusBar: Bool = true) {
         if animated {
             UIView.animate(withDuration: animationDuration) {
                 self.bottomContainer.alpha = 0
                 self.topContainer.alpha = 0
-                self.shouldHideStatusBar = true
+                if shouldHideStatusBar && !self.isStatusBarHidden {
+                    self.hideStatusBar()
+                }
             }
         }
         else {
             bottomContainer.alpha = 0
             topContainer.alpha = 0
-            shouldHideStatusBar = true
+            if shouldHideStatusBar && !self.isStatusBarHidden {
+                self.hideStatusBar()
+            }
+        }
+    }
+    
+    func showStatusBar(animated: Bool = false, animationDuration: TimeInterval = 0.2) {
+        if animated {
+            UIView.animate(withDuration: animationDuration) {
+                self.updateStatusBarVisibility(true)
+            }
+        }
+        else {
+            self.updateStatusBarVisibility(true)
+        }
+    }
+    
+    func hideStatusBar(animated: Bool = false, animationDuration: TimeInterval = 0.2) {
+        if animated {
+            UIView.animate(withDuration: animationDuration) {
+                self.updateStatusBarVisibility(false)
+            }
+        }
+        else {
+            self.updateStatusBarVisibility(false)
+        }
+    }
+    
+    func setStatusBarVisible(_ visible: Bool, animated: Bool = false, animationDuration: TimeInterval = 0.2) {
+        if animated {
+            UIView.animate(withDuration: animationDuration) {
+                self.updateStatusBarVisibility(visible)
+            }
+        }
+        else {
+            updateStatusBarVisibility(visible)
+        }
+    }
+    
+    func updateStatusBarVisibility(_ visible: Bool) {
+        if let statusBarView = statusBarView {
+            statusBarView.alpha = visible ? 1 : 0
+            isStatusBarHidden = !visible
+        }
+        else {
+            shouldHideStatusBar = !visible
+            isStatusBarHidden = !visible
         }
     }
     
     func restore() {
         bottomContainer.isHidden = false
         topContainer.isHidden = false
-        topContainer.alpha = 1.0
-        bottomContainer.alpha = 1.0
+        isInitialItemSet = false
+        isDetailed = false
+        containerPositionDisturbed = false
+        isPanning = false
         shouldHideStatusBar = false
+        isStatusBarHidden = false
         restore(zoomScaleForItemAt: currentIndex)
     }
     

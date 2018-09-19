@@ -53,6 +53,7 @@ public extension BNPhotoViewer {
             else {
                 restoreToOrigin()
                 containerPositionDisturbed = false
+                isPanning = true
             }
             break
             

@@ -62,67 +62,93 @@ public class BNPhotoViewer: UIViewController {
         static let photoListBackgroundColor: UIColor = .clear
     }
     
+    public var delegate: BNPhotoViewerDelegate?
+    
+    var isInitialItemSet: Bool = false
+    var currentIndex: Int = 0
+    var bottomBarButtons: [BNEasy2TapButton] = []
+    var recentOrientation: UIInterfaceOrientation?
+    var isStatusBarHidden: Bool = false
+    var hasTitle: Bool = false
+    var hasTopBarItems: Bool = false
+    var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+    var isDoneArrangingBottomBarButtons: Bool = false
+    var viewSize: CGSize?
+    var trueStatusBarHeight: CGFloat = 0
+    
     lazy var photoListLayout: BNPhotoListLayout = {
         let photoListLayout = BNPhotoListLayout()
         return photoListLayout
     }()
     
-    public var delegate: BNPhotoViewerDelegate?
-    
-    public var initialIndex: Int = 0
-    public var visibleItemIndex: Int {
-        return currentIndex
-    }
-    
-    var isInitialItemSet: Bool = false
-    var currentIndex: Int = 0 {
+    var _initialItemIndex: Int = 0 {
         didSet {
-            // TODO
+            if !isInitialItemSet {
+                isInitialItemSet = false
+            }
         }
     }
-    var bottomBarButtons: [BNEasy2TapButton] = []
+    
+    public var initialItemIndex: Int {
+        set {
+            guard !isInitialItemSet else {
+                return
+            }
+            if isValidIndex(newValue) {
+                _initialItemIndex = newValue
+            }
+            else {
+                _initialItemIndex = 0
+            }
+        }
+        get {
+            return _initialItemIndex
+        }
+    }
     
     var isDetailed: Bool = false {
         didSet {
-            updateDisplayItems(isDetailed: isDetailed, animated: true)
             state = isDetailed ? .detailed : .regular
         }
     }
     
-    var recentOrientation: UIInterfaceOrientation?
     var shouldHideStatusBar: Bool = false {
         didSet {
             setNeedsStatusBarAppearanceUpdate()
         }
     }
     
-    var hasTitle: Bool = false
-    var hasTopBarItems: Bool = false
     var isPanning: Bool = false {
         didSet {
             if !isPanning {
                 if !isDetailed && !containerPositionDisturbed {
-                    showBars(animated: true)
+                    state = .dragDownEnded
                 }
             }
             else {
                 if !isDetailed && containerPositionDisturbed {
-                    hideBars(animated: true)
+                    state = .dragDownBegan
+                }
+                else if !isDetailed && !containerPositionDisturbed {
+                    state = .dragDownIdle
                 }
             }
         }
     }
-    var containerPositionDisturbed: Bool = false
     
-    var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+    var containerPositionDisturbed: Bool = false {
+        didSet {
+            setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
     var state: BNPhotoViewerState = .regular {
         didSet {
+            updateDisplayItems(forState: state, animated: isViewLoaded)
             delegate?.photoViewer(self, didChangeState: state)
         }
     }
-    var isDoneArrangingBottomBarButtons: Bool = false
-    var viewSize: CGSize?
-    var trueStatusBarHeight: CGFloat = 0
+    
     
     /*
      * MARK: - Init
@@ -160,10 +186,10 @@ public class BNPhotoViewer: UIViewController {
         super.viewWillAppear(animated)
         fixViewFrame(withSize: trueViewSize)
         clear()
+        go(toItemAt: initialItemIndex)
         reloadData()
         saveNonZeroStatusBarHeight()
         updateTopOffset()
-        setInitialItem()
         updateDisplayItems()
         fixColors()
     }
@@ -187,8 +213,13 @@ public class BNPhotoViewer: UIViewController {
         saveNonZeroStatusBarHeight()
     }
     
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        statusBarView?.alpha = 1
     }
     
     public override func viewDidDisappear(_ animated: Bool) {
@@ -198,7 +229,7 @@ public class BNPhotoViewer: UIViewController {
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return containerPositionDisturbed ? .default : .lightContent
     }
     
     public override var prefersStatusBarHidden: Bool {
