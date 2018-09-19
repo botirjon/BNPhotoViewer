@@ -192,6 +192,9 @@ public extension BNPhotoViewer {
     func restore() {
         bottomContainer.isHidden = false
         topContainer.isHidden = false
+        topContainer.alpha = 1.0
+        bottomContainer.alpha = 1.0
+        shouldHideStatusBar = false
         restore(zoomScaleForItemAt: currentIndex)
     }
     
