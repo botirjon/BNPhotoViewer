@@ -186,6 +186,17 @@ public class BNPhotoViewer: UIViewController {
         saveNonZeroStatusBarHeight()
     }
     
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        clearOnClose()
+    }
+    
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        photoViewerDidClose?()
+        delegate?.photoViewerDidClose()
+    }
+    
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

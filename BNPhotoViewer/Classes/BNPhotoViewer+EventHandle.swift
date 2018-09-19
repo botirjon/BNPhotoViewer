@@ -97,4 +97,9 @@ public extension BNPhotoViewer {
         self.view.window!.layer.add(transition, forKey: nil)
         self.dismiss(animated: false, completion: completion)
     }
+    
+    func clearOnClose() {
+        restoreToOrigin()
+        restore()
+    }
 }

@@ -150,9 +150,4 @@ public extension BNPhotoViewer {
             trueStatusBarHeight = statusBarHeight
         }
     }
-    
-    func printStatusBarHeight() {
-        print("\(#function) >>> true status bar height: ", trueStatusBarHeight)
-        print("\(#function) >>> status bar height: ", statusBarHeight)
-    }
 }
