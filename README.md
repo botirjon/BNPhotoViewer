@@ -1,6 +1,9 @@
 # BNPhotoViewer
-
 [![CI Status](http://img.shields.io/travis/botirjon.nasridinov@gmail.com/BNPhotoViewer.svg?style=flat)](https://travis-ci.org/botirjon.nasridinov@gmail.com/BNPhotoViewer)
+[![Version](https://img.shields.io/cocoapods/v/BNPhotoViewer.svg?style=flat)](http://cocoapods.org/pods/BNPhotoViewer)
+[![License](https://img.shields.io/cocoapods/l/BNPhotoViewer.svg?style=flat)](http://cocoapods.org/pods/BNPhotoViewer)
+[![Platform](https://img.shields.io/cocoapods/p/BNPhotoViewer.svg?style=flat)](http://cocoapods.org/pods/BNPhotoViewer)
+
 
 ![Screenshot](screen2.PNG)
 ![Screenshot](screen4.PNG)
