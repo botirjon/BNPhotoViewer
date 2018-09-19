@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   A photo viewer to display a sequence of multiple photos
+                   A photo viewer to display a sequence of multiple photos. The information needed to configure photo viewer can be provided through BNPhotoViewerDelegate protocol methods.
                    DESC
 
   s.homepage     = "https://github.com/botirjon/BNPhotoViewer"
