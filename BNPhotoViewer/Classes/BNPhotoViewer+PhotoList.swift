@@ -18,6 +18,10 @@ extension BNPhotoViewer: UICollectionViewDelegate, UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BNPhotoViewer.photoCellId, for: indexPath) as! BNPhotoCell
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        if inde
+        delegate?.photoViewer(self, imageView: imageView, at: indexPath.row)
         if let imageView = cell.imageView,
             indexPath.row < delegate?.numberOfItems(in: self) ?? 0 {
             delegate?.photoViewer(self, imageView: imageView, at: indexPath.row)
