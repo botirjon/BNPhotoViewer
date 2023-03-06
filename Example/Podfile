@@ -3,6 +3,7 @@ use_frameworks!
 platform :ios, '10.0'
 
 target 'BNPhotoViewer_Example' do
+  pod 'Kingfisher', '~> 5.0'
   pod 'BNPhotoViewer', :path => '../'
 
   target 'BNPhotoViewer_Tests' do

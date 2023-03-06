@@ -1,0 +1,6 @@
+framework module BNPhotoViewer {
+  umbrella header "BNPhotoViewer-umbrella.h"
+
+  export *
+  module * { export * }
+}

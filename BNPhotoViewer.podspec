@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BNPhotoViewer'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of BNPhotoViewer.'
+  s.version          = '1.0.0'
+  s.summary          = "A photo viewer to display a sequence of multiple photos."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  A photo viewer to display a sequence of multiple photos. The information needed to configure photo viewer can be provided through BNPhotoViewerDelegate protocol methods.
                        DESC
 
   s.homepage         = 'https://github.com/botirjon/BNPhotoViewer'
@@ -28,15 +28,16 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/botirjon/BNPhotoViewer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'BNPhotoViewer/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'BNPhotoViewer' => ['BNPhotoViewer/Assets/*.png']
-  # }
+  s.resources = "BNPhotoViewer/Resources/*.xib"
+  s.resource_bundles = {
+    'BNPhotoViewer' => ['BNPhotoViewer/Resources/**/*.xib']
+  }
+  s.swift_version = '4.1'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
